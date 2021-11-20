@@ -27,6 +27,19 @@ public $successStatus = 200;
         } 
     }
 /** 
+     * logout api 
+     * 
+     * @return \Illuminate\Http\Response 
+     */ 
+    public function logout(){ 
+        if (Auth::check()) {
+            Auth::user()->token()->revoke();
+            return response()->json(['success' =>'logout_success'], 200); 
+        }else{
+            return response()->json(['error' =>'api.something_went_wrong'], 500);
+        }
+    }
+/** 
      * Register api 
      * 
      * @return \Illuminate\Http\Response 
@@ -56,7 +69,11 @@ return response()->json(['success'=>$success], $this-> successStatus);
      */ 
     public function details() 
     { 
-        $user = Auth::user(); 
-        return response()->json(['success' => $user], $this-> successStatus); 
+        if (Auth::check()) {
+            $user = Auth::user(); 
+        return response()->json(['success' => $user], $this-> successStatus);
+        }else{
+            return response()->json(['error' =>'api.something_went_wrong'], 500);
+        }
     } 
 }
