@@ -19,7 +19,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::post('login', 'API\UserController@login');
 Route::post('register', 'API\UserController@register');
+Route::get('allFashion', 'API\FashionController@index');
+Route::post('filterFashion', 'API\FashionController@filter');
+Route::get('showFashion/{id}', 'API\FashionController@show');
 Route::group(['middleware' => 'auth:api'], function() {
-Route::post('details', 'API\UserController@details');
+Route::get('details', 'API\UserController@details');
 Route::post('logout', 'API\UserController@logout');
 });
