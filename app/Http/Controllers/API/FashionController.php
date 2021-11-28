@@ -63,6 +63,7 @@ class FashionController extends Controller
     public function filter(Request $request)
     {
         $name = $request->name;
+        $species = $request->species;
         $name = $name .'%';
         $fashions = DB::table('fashions')
                 ->where('name', 'like', $name)
