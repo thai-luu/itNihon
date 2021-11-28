@@ -21,6 +21,7 @@ class CreateFashionsTable extends Migration
             $table->string('description');
             $table->string('img_url');
             $table->integer('sold');
+            $table->integer('price');
         });
     }
 
