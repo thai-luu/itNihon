@@ -17,7 +17,7 @@ class FashionSeeder extends Seeder
             [
             'name' => "ラコステシャツ",
             'species' => "シャツ",     // chủng loại 
-            'img_url'=> "https://anhdepfree.com/wp-content/uploads/2018/08/bo-hinh-nen-may-tinh-4k-cuc-dep-20.jpg", // link ảnh
+            'img_url'=> "https://assets.lacoste.jp/product_images/67178/file/ph230e-001-fn.20181028070218896254843.mn.jpg", // link ảnh
             'description' => "ラコステ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
@@ -26,7 +26,7 @@ class FashionSeeder extends Seeder
         [
             'name' => "ラコステシャツ",
             'species' => "シャツ",     // chủng loại 
-            'img_url'=> "https://anhdepfree.com/wp-content/uploads/2018/08/bo-hinh-nen-may-tinh-4k-cuc-dep-20.jpg", // link ảnh
+            'img_url'=> "https://assets.lacoste.jp/product_images/67178/file/ph230e-001-fn.20181028070218896254843.mn.jpg", // link ảnh
             'description' => "ラコステ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
@@ -35,7 +35,7 @@ class FashionSeeder extends Seeder
         [
             'name' => "ラコステシャツ",
             'species' => "シャツ",     // chủng loại 
-            'img_url'=> "https://anhdepfree.com/wp-content/uploads/2018/08/bo-hinh-nen-may-tinh-4k-cuc-dep-20.jpg", // link ảnh
+            'img_url'=> "https://assets.lacoste.jp/product_images/67178/file/ph230e-001-fn.20181028070218896254843.mn.jpg", // link ảnh
             'description' => "ラコステ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
@@ -44,7 +44,7 @@ class FashionSeeder extends Seeder
         [
             'name' => "ルイ・ヴィトンシャツ",
             'species' => "シャツ", // chủng loại 
-            'img_url'=> "https://anhdepfree.com/wp-content/uploads/2018/08/bo-hinh-nen-may-tinh-4k-cuc-dep-20.jpg", // link ảnh
+            'img_url'=> "https://www.ccc-lab.net/wp-content/uploads/2019/06/111-50.jpg", // link ảnh
             'description' => "ルイ・ヴィトン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1500", // giá cả
@@ -53,7 +53,7 @@ class FashionSeeder extends Seeder
         [
             'name' => "ルイ・ヴィトンシャツ",
             'species' => "シャツ", // chủng loại 
-            'img_url'=> "https://anhdepfree.com/wp-content/uploads/2018/08/bo-hinh-nen-may-tinh-4k-cuc-dep-20.jpg", // link ảnh
+            'img_url'=> "https://www.ccc-lab.net/wp-content/uploads/2019/06/111-50.jpg", // link ảnh
             'description' => "ルイ・ヴィトン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1500", // giá cả
@@ -62,7 +62,7 @@ class FashionSeeder extends Seeder
         [
             'name' => "ルイ・ヴィトンシャツ",
             'species' => "シャツ", // chủng loại 
-            'img_url'=> "https://anhdepfree.com/wp-content/uploads/2018/08/bo-hinh-nen-may-tinh-4k-cuc-dep-20.jpg", // link ảnh
+            'img_url'=> "https://www.ccc-lab.net/wp-content/uploads/2019/06/111-50.jpg", // link ảnh
             'description' => "ルイ・ヴィトン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1500", // giá cả
@@ -71,7 +71,7 @@ class FashionSeeder extends Seeder
         [
             'name' => "グッチシャツ",
             'species' => "シャツ", // chủng loại 
-            'img_url'=> "https://anhdepfree.com/wp-content/uploads/2018/08/bo-hinh-nen-may-tinh-4k-cuc-dep-20.jpg", // link ảnh
+            'img_url'=> "https://static-buyma-com.akamaized.net/resizer/item/210419/0067744330/346930653/org.jpg?w=1500&h=1500", // link ảnh
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả
@@ -80,7 +80,7 @@ class FashionSeeder extends Seeder
         [
             'name' => "グッチシャツ",
             'species' => "シャツ", // chủng loại 
-            'img_url'=> "https://anhdepfree.com/wp-content/uploads/2018/08/bo-hinh-nen-may-tinh-4k-cuc-dep-20.jpg", // link ảnh
+            'img_url'=> "https://static-buyma-com.akamaized.net/resizer/item/210419/0067744330/346930653/org.jpg?w=1500&h=1500", // link ảnh
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả
@@ -89,7 +89,7 @@ class FashionSeeder extends Seeder
         [
             'name' => "グッチシャツ",
             'species' => "シャツ", // chủng loại 
-            'img_url'=> "https://anhdepfree.com/wp-content/uploads/2018/08/bo-hinh-nen-may-tinh-4k-cuc-dep-20.jpg", // link ảnh
+            'img_url'=> "https://static-buyma-com.akamaized.net/resizer/item/210419/0067744330/346930653/org.jpg?w=1500&h=1500", // link ảnh
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả

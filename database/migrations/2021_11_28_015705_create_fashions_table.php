@@ -16,7 +16,7 @@ class CreateFashionsTable extends Migration
         Schema::create('fashions', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name')->unique();
+            $table->string('name');
             $table->string('species');
             $table->string('description');
             $table->string('img_url');
