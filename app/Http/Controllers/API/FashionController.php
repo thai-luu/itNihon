@@ -72,7 +72,7 @@ class FashionController extends Controller
         $fashions = DB::table('fashions')
                 ->where('name', 'like', $name)
                 ->where('species', 'like', $species)
-               // ->where('price','>=', $priceMin)
+                ->where('price','>=', $priceMin)
                 //->where('price','<=', $priceMax)
                 ->get();
         return $fashions;
