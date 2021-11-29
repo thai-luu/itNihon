@@ -66,14 +66,14 @@ class FashionController extends Controller
         $species = $request->species;
         $priceMin = (empty($request->min)) ? 0 : $request->min ;
         $priceMax = (empty($request->max)) ? 100000000000000000000000 : $request->max;
-        $name = '_'. $name .'_';
+        $name = '%'. $name .'%';
       //  return $name;
         $species = '%'. $species .'%';
         $fashions = DB::table('fashions')
-                //->where('name', 'like', $name)
-                //->where('species', 'like', $species)
-                ->where('price','>=', $priceMin)
-                ->where('price','<=', $priceMax)
+                ->where('name', 'like', $name)
+                ->where('species', 'like', $species)
+               // ->where('price','>=', $priceMin)
+                //->where('price','<=', $priceMax)
                 ->get();
         return $fashions;
     }
