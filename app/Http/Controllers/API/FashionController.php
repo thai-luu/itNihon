@@ -17,7 +17,7 @@ class FashionController extends Controller
     public function index()
     {
         //
-        $fashion = Fashion::all();
+        $fashion = Fashion::paginate(8);
         return $fashion;
     }
 
@@ -74,7 +74,7 @@ class FashionController extends Controller
                 ->where('species', 'like', $species)
                 ->where('price','>=', $priceMin)
                 ->where('price','<=', $priceMax)
-                ->get();
+                ->paginate(8);
         return $fashions;
     }
 
