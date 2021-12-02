@@ -21,7 +21,6 @@ class FashionSeeder extends Seeder
             'description' => "ラコステ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
-            'size' => "M",
         ],
         [
             'name' => "ラコステシャツ",
@@ -30,7 +29,6 @@ class FashionSeeder extends Seeder
             'description' => "ラコステ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
-            'size' => "L",
         ],
         [
             'name' => "ラコステシャツ",
@@ -39,7 +37,6 @@ class FashionSeeder extends Seeder
             'description' => "ラコステ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
-            'size' => "XL",
         ],
         [
             'name' => "ルイ・ヴィトンシャツ",
@@ -48,7 +45,6 @@ class FashionSeeder extends Seeder
             'description' => "ルイ・ヴィトン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1500", // giá cả
-            'size' => "M",
         ],
         [
             'name' => "ルイ・ヴィトンシャツ",
@@ -57,7 +53,6 @@ class FashionSeeder extends Seeder
             'description' => "ルイ・ヴィトン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1500", // giá cả
-            'size' => "L",
         ],
         [
             'name' => "ルイ・ヴィトンシャツ",
@@ -66,7 +61,6 @@ class FashionSeeder extends Seeder
             'description' => "ルイ・ヴィトン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1500", // giá cả
-            'size' => "XL",
         ],
         [
             'name' => "グッチシャツ",
@@ -75,7 +69,6 @@ class FashionSeeder extends Seeder
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả
-            'size' => "M",
         ],
         [
             'name' => "グッチシャツ",
@@ -84,7 +77,6 @@ class FashionSeeder extends Seeder
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả
-            'size' => "L",
         ],
         [
             'name' => "グッチシャツ",
@@ -93,7 +85,6 @@ class FashionSeeder extends Seeder
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả
-            'size' => "XL",
         ],
         [
             'name' => "グッチセーター",
@@ -102,7 +93,6 @@ class FashionSeeder extends Seeder
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "2000", // giá cả
-            'size' => "M",
         ],
         [
             'name' => "グッチセーター",
@@ -111,7 +101,6 @@ class FashionSeeder extends Seeder
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "2000", // giá cả
-            'size' => "L",
         ],
         [
             'name' => "グッチセーター",
@@ -120,7 +109,6 @@ class FashionSeeder extends Seeder
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "2000", // giá cả
-            'size' => "XL",
         ],
         [
             'name' => "ユニクロセーター",
@@ -129,7 +117,6 @@ class FashionSeeder extends Seeder
             'description' => "ユニクロ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
-            'size' => "M",
         ],
         [
             'name' => "ユニクロセーター",
@@ -138,7 +125,6 @@ class FashionSeeder extends Seeder
             'description' => "ユニクロ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
-            'size' => "L",
         ],
         [
             'name' => "ユニクロセーター",
@@ -147,7 +133,6 @@ class FashionSeeder extends Seeder
             'description' => "ユニクロ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
-            'size' => "XL",
         ],
         [
             'name' => "ユニクロパーカー",
@@ -156,7 +141,6 @@ class FashionSeeder extends Seeder
             'description' => "ユニクロ",
             'sold'=> "100", // số lượng đã bán
             'price' => "800", // giá cả
-            'size' => "M",
         ],
         [
             'name' => "ユニクロパーカー",
@@ -165,7 +149,6 @@ class FashionSeeder extends Seeder
             'description' => "ユニクロ",
             'sold'=> "100", // số lượng đã bán
             'price' => "800", // giá cả
-            'size' => "L",
         ],
         [
             'name' => "ユニクロパーカー",
@@ -174,7 +157,6 @@ class FashionSeeder extends Seeder
             'description' => "ユニクロ",
             'sold'=> "100", // số lượng đã bán
             'price' => "800", // giá cả
-            'size' => "XL",
         ],
         [
             'name' => "アディダススポーツウェア",
@@ -183,7 +165,6 @@ class FashionSeeder extends Seeder
             'description' => "アディダス",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả
-            'size' => "M",
         ],
         [
             'name' => "アディダススポーツウェア",
@@ -192,7 +173,6 @@ class FashionSeeder extends Seeder
             'description' => "アディダス",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả
-            'size' => "L",
         ],
         [
             'name' => "アディダススポーツウェア",
@@ -201,7 +181,6 @@ class FashionSeeder extends Seeder
             'description' => "アディダス",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả
-            'size' => "XL",
         ],
         [
             'name' => "リーバイスジーンズ",
@@ -210,7 +189,6 @@ class FashionSeeder extends Seeder
             'description' => "リーバイス",
             'sold'=> "100", // số lượng đã bán
             'price' => "1400", // giá cả
-            'size' => "M",
         ],
         [
             'name' => "リーバイスジーンズ",
@@ -219,7 +197,6 @@ class FashionSeeder extends Seeder
             'description' => "リーバイス",
             'sold'=> "100", // số lượng đã bán
             'price' => "1400", // giá cả
-            'size' => "L",
         ],
         [
             'name' => "リーバイスジーンズ",
@@ -228,7 +205,6 @@ class FashionSeeder extends Seeder
             'description' => "リーバイス",
             'sold'=> "100", // số lượng đã bán
             'price' => "1400", // giá cả
-            'size' => "XL",
         ],
         [
             'name' => "チャンピオンライフジャケット",
@@ -237,7 +213,6 @@ class FashionSeeder extends Seeder
             'description' => "チャンピオン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1800", // giá cả
-            'size' => "M",
         ],
         [
             'name' => "チャンピオンライフジャケット",
@@ -246,7 +221,6 @@ class FashionSeeder extends Seeder
             'description' => "チャンピオン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1800", // giá cả
-            'size' => "L",
         ],
         [
             'name' => "チャンピオンライフジャケット",
@@ -255,7 +229,6 @@ class FashionSeeder extends Seeder
             'description' => "チャンピオン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1800", // giá cả
-            'size' => "XL",
         ],
         [
             'name' => "チャンピオンセーター",
@@ -264,7 +237,6 @@ class FashionSeeder extends Seeder
             'description' => "チャンピオン",
             'sold'=> "100", // số lượng đã bán
             'price' => "800", // giá cả
-            'size' => "M",
         ],
         [
             'name' => "チャンピオンセーター",
@@ -273,7 +245,6 @@ class FashionSeeder extends Seeder
             'description' => "チャンピオン",
             'sold'=> "100", // số lượng đã bán
             'price' => "800", // giá cả
-            'size' => "L",
         ],
         [
             'name' => "チャンピオンセーター",
@@ -282,7 +253,6 @@ class FashionSeeder extends Seeder
             'description' => "チャンピオン",
             'sold'=> "100", // số lượng đã bán
             'price' => "800", // giá cả
-            'size' => "XL",
         ],
         [
             'name' => "ナイキジョガーパンツ",
@@ -291,7 +261,6 @@ class FashionSeeder extends Seeder
             'description' => "ナイキ",
             'sold'=> "90", // số lượng đã bán
             'price' => "1100", // giá cả
-            'size' => "M",
         ],
         [
             'name' => "ナイキジョガーパンツ",
@@ -300,7 +269,6 @@ class FashionSeeder extends Seeder
             'description' => "ナイキ",
             'sold'=> "150", // số lượng đã bán
             'price' => "1100", // giá cả
-            'size' => "L",
         ],
         [
             'name' => "ナイキジョガーパンツ",
@@ -309,7 +277,6 @@ class FashionSeeder extends Seeder
             'description' => "ナイキ",
             'sold'=> "110", // số lượng đã bán
             'price' => "1100", // giá cả
-            'size' => "XL",
         ],
         [
             'name' => "プーマTシャツ",
@@ -318,7 +285,6 @@ class FashionSeeder extends Seeder
             'description' => "プーマ",
             'sold'=> "200", // số lượng đã bán
             'price' => "500", // giá cả
-            'size' => "M",
         ],
         [
             'name' => "プーマTシャツ",
@@ -327,7 +293,6 @@ class FashionSeeder extends Seeder
             'description' => "プーマ",
             'sold'=> "200", // số lượng đã bán
             'price' => "500", // giá cả
-            'size' => "L",
         ],
         [
             'name' => "プーマTシャツ",
@@ -336,7 +301,6 @@ class FashionSeeder extends Seeder
             'description' => "プーマ",
             'sold'=> "200", // số lượng đã bán
             'price' => "500", // giá cả
-            'size' => "XL",
         ],
         ]
     );

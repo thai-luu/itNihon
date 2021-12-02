@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             FashionSeeder::class,
+            SizeSeeder::class,
+            FashionSizeSeeder::class
             
         ]);
     }

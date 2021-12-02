@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Fashion extends Model
+class Size extends Model
 {
     use HasFactory;
 
-    public function sizes()
+    public function fashions()
     {
-        return $this->belongsToMany(Size::class)->withPivot('quantity');
+        return $this->belongsToMany(Fashion::class)->withPivot('quantity');
     }
 }
