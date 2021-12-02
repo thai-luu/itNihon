@@ -21,6 +21,8 @@ class FashionSeeder extends Seeder
             'description' => "ラコステ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "ラコステシャツ",
@@ -29,6 +31,8 @@ class FashionSeeder extends Seeder
             'description' => "ラコステ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "ラコステシャツ",
@@ -37,6 +41,8 @@ class FashionSeeder extends Seeder
             'description' => "ラコステ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "ルイ・ヴィトンシャツ",
@@ -45,6 +51,8 @@ class FashionSeeder extends Seeder
             'description' => "ルイ・ヴィトン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1500", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "ルイ・ヴィトンシャツ",
@@ -53,6 +61,8 @@ class FashionSeeder extends Seeder
             'description' => "ルイ・ヴィトン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1500", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "ルイ・ヴィトンシャツ",
@@ -61,6 +71,8 @@ class FashionSeeder extends Seeder
             'description' => "ルイ・ヴィトン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1500", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "グッチシャツ",
@@ -69,6 +81,8 @@ class FashionSeeder extends Seeder
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "グッチシャツ",
@@ -77,6 +91,8 @@ class FashionSeeder extends Seeder
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "グッチシャツ",
@@ -85,6 +101,8 @@ class FashionSeeder extends Seeder
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "グッチセーター",
@@ -93,6 +111,8 @@ class FashionSeeder extends Seeder
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "2000", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "グッチセーター",
@@ -101,6 +121,8 @@ class FashionSeeder extends Seeder
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "2000", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "グッチセーター",
@@ -109,6 +131,8 @@ class FashionSeeder extends Seeder
             'description' => "グッチ",
             'sold'=> "100", // số lượng đã bán
             'price' => "2000", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "ユニクロセーター",
@@ -117,6 +141,8 @@ class FashionSeeder extends Seeder
             'description' => "ユニクロ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "ユニクロセーター",
@@ -125,6 +151,8 @@ class FashionSeeder extends Seeder
             'description' => "ユニクロ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "ユニクロセーター",
@@ -133,6 +161,8 @@ class FashionSeeder extends Seeder
             'description' => "ユニクロ",
             'sold'=> "100", // số lượng đã bán
             'price' => "1000", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "ユニクロパーカー",
@@ -141,6 +171,8 @@ class FashionSeeder extends Seeder
             'description' => "ユニクロ",
             'sold'=> "100", // số lượng đã bán
             'price' => "800", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "ユニクロパーカー",
@@ -149,6 +181,8 @@ class FashionSeeder extends Seeder
             'description' => "ユニクロ",
             'sold'=> "100", // số lượng đã bán
             'price' => "800", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "ユニクロパーカー",
@@ -157,6 +191,8 @@ class FashionSeeder extends Seeder
             'description' => "ユニクロ",
             'sold'=> "100", // số lượng đã bán
             'price' => "800", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "アディダススポーツウェア",
@@ -165,6 +201,8 @@ class FashionSeeder extends Seeder
             'description' => "アディダス",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "アディダススポーツウェア",
@@ -173,6 +211,8 @@ class FashionSeeder extends Seeder
             'description' => "アディダス",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "アディダススポーツウェア",
@@ -181,6 +221,8 @@ class FashionSeeder extends Seeder
             'description' => "アディダス",
             'sold'=> "100", // số lượng đã bán
             'price' => "1200", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "リーバイスジーンズ",
@@ -189,6 +231,8 @@ class FashionSeeder extends Seeder
             'description' => "リーバイス",
             'sold'=> "100", // số lượng đã bán
             'price' => "1400", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "リーバイスジーンズ",
@@ -197,6 +241,8 @@ class FashionSeeder extends Seeder
             'description' => "リーバイス",
             'sold'=> "100", // số lượng đã bán
             'price' => "1400", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "リーバイスジーンズ",
@@ -205,6 +251,8 @@ class FashionSeeder extends Seeder
             'description' => "リーバイス",
             'sold'=> "100", // số lượng đã bán
             'price' => "1400", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "チャンピオンライフジャケット",
@@ -213,6 +261,8 @@ class FashionSeeder extends Seeder
             'description' => "チャンピオン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1800", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "チャンピオンライフジャケット",
@@ -221,6 +271,8 @@ class FashionSeeder extends Seeder
             'description' => "チャンピオン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1800", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "チャンピオンライフジャケット",
@@ -229,6 +281,8 @@ class FashionSeeder extends Seeder
             'description' => "チャンピオン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1800", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "チャンピオンセーター",
@@ -237,6 +291,8 @@ class FashionSeeder extends Seeder
             'description' => "チャンピオン",
             'sold'=> "100", // số lượng đã bán
             'price' => "800", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "チャンピオンセーター",
@@ -245,6 +301,8 @@ class FashionSeeder extends Seeder
             'description' => "チャンピオン",
             'sold'=> "100", // số lượng đã bán
             'price' => "800", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "チャンピオンセーター",
@@ -253,6 +311,8 @@ class FashionSeeder extends Seeder
             'description' => "チャンピオン",
             'sold'=> "100", // số lượng đã bán
             'price' => "800", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "ナイキジョガーパンツ",
@@ -261,6 +321,8 @@ class FashionSeeder extends Seeder
             'description' => "ナイキ",
             'sold'=> "90", // số lượng đã bán
             'price' => "1100", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "ナイキジョガーパンツ",
@@ -269,6 +331,8 @@ class FashionSeeder extends Seeder
             'description' => "ナイキ",
             'sold'=> "150", // số lượng đã bán
             'price' => "1100", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "ナイキジョガーパンツ",
@@ -277,6 +341,8 @@ class FashionSeeder extends Seeder
             'description' => "ナイキ",
             'sold'=> "110", // số lượng đã bán
             'price' => "1100", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "プーマTシャツ",
@@ -285,6 +351,8 @@ class FashionSeeder extends Seeder
             'description' => "プーマ",
             'sold'=> "200", // số lượng đã bán
             'price' => "500", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "プーマTシャツ",
@@ -293,6 +361,8 @@ class FashionSeeder extends Seeder
             'description' => "プーマ",
             'sold'=> "200", // số lượng đã bán
             'price' => "500", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         [
             'name' => "プーマTシャツ",
@@ -301,6 +371,8 @@ class FashionSeeder extends Seeder
             'description' => "プーマ",
             'sold'=> "200", // số lượng đã bán
             'price' => "500", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
         ],
         ]
     );

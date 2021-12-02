@@ -19,6 +19,8 @@ class CreateFashionsTable extends Migration
             $table->string('name');
             $table->string('species');
             $table->string('description');
+            $table->string('style');
+            $table->integer('sex');
             $table->string('img_url');
             $table->integer('sold');
             $table->integer('price');
