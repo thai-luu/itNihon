@@ -50,7 +50,15 @@ class FashionController extends Controller
      */
     public function show($id)
     {
-        $fashion = DB::table('fashions')->where('id', $id)->first();
+        // $fashion = DB::table('fashions')->where('id', $id)->first();
+        $fashion = Fashion::where('id', $id)->with('sizes:name')->first();
+        if ($fashion == null) {
+            return response()->json(['error' =>'not found'], 404);
+        }
+        foreach($fashion->sizes as $size) {
+            $size->quantity = $size->pivot->quantity;
+            unset($size->pivot);
+        }
         return $fashion;
     }
 
