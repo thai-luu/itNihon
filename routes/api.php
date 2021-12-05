@@ -24,5 +24,8 @@ Route::post('filterFashion', 'API\FashionController@filter');
 Route::get('showFashion/{id}', 'API\FashionController@show');
 Route::group(['middleware' => 'auth:api'], function() {
 Route::get('details', 'API\UserController@details');
+Route::post('updateUser/{id}', 'API\UserController@update');
 Route::post('logout', 'API\UserController@logout');
+Route::get('recommended', 'API\UserController@recommended');
+Route::get('showRecommended/{id}', 'API\FashionController@showRecommended');
 });

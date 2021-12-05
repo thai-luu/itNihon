@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth; 
 use Validator;
 use DB;
+use App\Models\Fashion; 
 class UserController extends Controller 
 {
 public $successStatus = 200;
@@ -85,4 +86,49 @@ return response()->json(['success'=>$success], $this-> successStatus);
             return response()->json(['error' =>'api.something_went_wrong'], 500);
         }
     } 
+    public function update(Request $request, $id) 
+    { 
+        $name = $request->name;
+        
+        $height = $request->height;
+        $weight = $request->weight;
+        $age = $request->age;
+        $sex = $request->sex;
+        $user = User::find($id);
+        if($user){
+        $user->name = $name;
+        $user->height = $height;
+        $user->weight = $weight;
+        $user->age = $age;
+        $user->sex = $sex;
+        $user->save();
+        return response()->json(['success' => $user], $this-> successStatus);
+        }else{
+            return response()->json(['error' =>'api.something_went_wrong'], 500);
+        }
+    } 
+    public function recommended() 
+    { 
+        if (Auth::check()) {
+            $user = Auth::user(); 
+            json_decode($user,true);
+            $sex = $user['sex'];
+            $sex = '%'. $sex .'%';
+            if($user['age'] >= 18 && $user['age'] <= 35){
+                $fashion = DB::table('fashions')->where('style', 0)->where('sex','like', $sex)->paginate(8);
+            }
+            elseif($user['age'] >= 36 && $user['age'] <= 50){
+                $fashion = DB::table('fashions')->where('style', 1)->where('sex','like', $sex)->paginate(8);
+            }
+            elseif($user['age'] >= 51){
+                $fashion = DB::table('fashions')->where('style', 2)->where('sex','like', $sex)->paginate(8);
+            }
+            else{
+                $fashion = DB::table('fashions')->where('sex','like', $sex)->get();
+            }
+        return response()->json(['success' => $fashion], $this-> successStatus);
+        }else{
+            return response()->json(['error' =>'api.something_went_wrong'], 500);
+        }
+    }
 }
