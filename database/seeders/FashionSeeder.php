@@ -27,7 +27,7 @@ class FashionSeeder extends Seeder
         [
             'name' => "ルイ・ヴィトンシャツ",
             'species' => "シャツ", // chủng loại 
-            'img_url'=> "https://www.ccc-lab.net/wp-content/uploads/2019/06/111-50.jpg", // link ảnh
+            'img_url'=> "https://komehyo.jp/contents/images/goods/c12/2410024937707_1_b.jpg", // link ảnh
             'description' => "ルイ・ヴィトン",
             'sold'=> "100", // số lượng đã bán
             'price' => "1500", // giá cả
