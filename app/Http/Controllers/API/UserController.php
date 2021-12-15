@@ -115,14 +115,14 @@ return response()->json(['success'=>$success], $this-> successStatus);
             $sex = $user['sex'];
             $sex = '%'. $sex .'%';
             
-            if($user['age'] <= 35){
-                $fashion = DB::table('fashions')->where('style', 0)->where(function ($query) use ($sex) {$query->where('sex','like', $sex)->orWhere('sex','=',2);})->paginate(8);
+            if($user['age'] >= 18 && $user['age'] <= 25){
+                $fashion = DB::table('fashions')->where(function ($query) use ($sex) {$query->where('sex','like', $sex)->orWhere('sex','=',2);})->paginate(8);
             }
-            else if($user['age'] >= 36 && $user['age'] <= 50){
+            else if($user['age'] >= 26 && $user['age'] <= 35){
                 
                 $fashion = DB::table('fashions')->where('style', 1)->where(function ($query) use ($sex) {$query->where('sex','like', $sex)->orWhere('sex','=',2);})->paginate(8);
             }
-            else if($user['age'] >= 51){
+            else if($user['age'] >= 36){
                 $fashion = DB::table('fashions')->where('style', 2)->where(function ($query) use ($sex) {$query->where('sex','like', $sex)->orWhere('sex','=',2);})->paginate(8);
             }
             else{
