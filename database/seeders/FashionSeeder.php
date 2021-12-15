@@ -214,6 +214,206 @@ class FashionSeeder extends Seeder
             'style' => rand(0, 2),
             'sex' => rand(0, 2)
         ],
+        [
+            'name' => "ルイヴィトンのTシャツ",
+            'species' => "Tシャツ", // chủng loại 
+            'img_url'=> "https://ap.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-frill-blouse--FHBL13AQV000_PM2_Front%20view.png?wid=456&hei=456", // link ảnh
+            'description' => "ルイヴィトン",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "1760", // giá cả
+            'style' => "3",
+            'sex' => "2"
+        ],
+        [
+            'name' => "ルイヴィトンのTシャツ",
+            'species' => "Tシャツ", // chủng loại 
+            'img_url'=> "https://ap.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-cosmic-surfer-print-t-shirt--FMTS99LY9001_PM2_Front%20view.png?wid=456&hei=456", // link ảnh
+            'description' => "ルイヴィトン",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "1500", // giá cả
+            'style' => "1",
+            'sex' => "2"
+        ],
+        [
+            'name' => "ルイヴィトンシャツ",
+            'species' => "シャツ", // chủng loại 
+            'img_url'=> "https://ap.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-silk-bow-shirt--FMTP84NPZ535_PM2_Front%20view.png?wid=456&hei=456", // link ảnh
+            'description' => "ルイヴィトン",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "1500", // giá cả
+            'style' => "4",
+            'sex' => "2"
+        ],
+        [
+            'name' => "グッチシャツ",
+            'species' => "シャツ", // chủng loại 
+            'img_url'=> "https://media.gucci.com/style/White_South_0_160_316x316/1632407405/675614_Z3599_1239_002_100_0000_Light.jpg", // link ảnh
+            'description' => "グッチ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "2500", // giá cả
+            'style' => "0",
+            'sex' => "2"
+        ],
+        [
+            'name' => "グッチパンツ",
+            'species' => "パンツ", // chủng loại 
+            'img_url'=> "https://media.gucci.com/style/White_South_0_160_316x316/1630426513/677472_XNAL7_1000_001_100_0000_Light.jpg", // link ảnh
+            'description' => "グッチ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "4000", // giá cả
+            'style' => "2",
+            'sex' => "2"
+        ],
+        [
+            'name' => "グッチレギンス",
+            'species' => "レギンス", // chủng loại 
+            'img_url'=> "https://media.gucci.com/style/White_South_0_160_316x316/1638209822/672400_XJDS6_1082_001_100_0000_Light.jpg", // link ảnh
+            'description' => "グッチ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "1000", // giá cả
+            'style' => "0",
+            'sex' => "2"
+        ],
+        [
+            'name' => "グッチセーター",
+            'species' => "セーター", // chủng loại 
+            'img_url'=> "https://media.gucci.com/style/DarkGray_South_0_160_316x316/1633046411/683716_XKB4H_9791_001_100_0000_Light-Wool-knit-sweater-with-leather-detail.jpg", // link ảnh
+            'description' => "グッチ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "2200", // giá cả
+            'style' => "2",
+            'sex' => "1"
+        ],
+        [
+            'name' => "グッチパーカー",
+            'species' => "パーカー", // chủng loại 
+            'img_url'=> "https://media.gucci.com/style/White_South_0_160_316x316/1630081809/660282_XJDW6_1152_001_100_0000_Light.jpg", // link ảnh
+            'description' => "グッチ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "1500", // giá cả
+            'style' => "1",
+            'sex' => "1"
+        ],
+        [
+            'name' => "グッチパーカー",
+            'species' => "パーカー", // chủng loại 
+            'img_url'=> "https://media.gucci.com/style/White_South_0_160_316x316/1630081809/660282_XJDW6_1152_001_100_0000_Light.jpg", // link ảnh
+            'description' => "グッチ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "1500", // giá cả
+            'style' => "1",
+            'sex' => "1"
+        ],
+        [
+            'name' => "グッチジョガーパンツ",
+            'species' => "ジョガーパンツ", // chủng loại 
+            'img_url'=> "https://media.gucci.com/style/White_South_0_160_316x316/1629964808/676484_XJDXJ_4684_001_100_0000_Light.jpg", // link ảnh
+            'description' => "グッチ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "1400", // giá cả
+            'style' => "1",
+            'sex' => "1"
+        ],
+        [
+            'name' => "グッチジャケット",
+            'species' => "ジャケット", // chủng loại 
+            'img_url'=> "https://media.gucci.com/style/White_South_0_160_316x316/1634837442/673264_Z8AR0_4433_001_100_0000_Light.jpg", // link ảnh
+            'description' => "グッチ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "2300", // giá cả
+            'style' => "5",
+            'sex' => "1"
+        ],
+        [
+            'name' => "グッチパンツ",
+            'species' => "パンツ", // chủng loại 
+            'img_url'=> "https://media.gucci.com/style/White_South_0_160_316x316/1634836535/668588_Z8AQY_9727_001_100_0000_Light.jpg", // link ảnh
+            'description' => "グッチ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "1000", // giá cả
+            'style' => "4",
+            'sex' => "1"
+        ],
+        [
+            'name' => "グッチジャケット",
+            'species' => "ジャケット", // chủng loại 
+            'img_url'=> "https://media.gucci.com/style/White_South_0_160_316x316/1632245403/663753_XAAC0_9118_002_100_0000_Light.jpg", // link ảnh
+            'description' => "グッチ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "3000", // giá cả
+            'style' => "0",
+            'sex' => "1"
+        ],
+        [
+            'name' => "ナイキスポーツウェア",
+            'species' => "スポーツウェア", // chủng loại 
+            'img_url'=> "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/166b61f1-cb3e-4638-ad84-849f7bc10ce3/sportswear-essentials-plush-hoodie-kxg2Vc.png", // link ảnh
+            'description' => "ナイキ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "200", // giá cả
+            'style' => "0",
+            'sex' => "2"
+        ],
+        [
+            'name' => "ナイキジャケット",
+            'species' => "ジャケット", // chủng loại 
+            'img_url'=> "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e84fd6be-7b3d-44bc-9a1f-47793611639a/esc-shirt-jacket-wSh6Wn.png", // link ảnh
+            'description' => "ナイキ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "500", // giá cả
+            'style' => "2",
+            'sex' => "2"
+        ],
+        [
+            'name' => "ナイキパンツ",
+            'species' => "パンツ", // chủng loại 
+            'img_url'=> "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/97254032-0318-47bf-90b6-73c706cedb78/jordan-essentials-fleece-trousers-mm0g65.png", // link ảnh
+            'description' => "ナイキ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "100", // giá cả
+            'style' => "0",
+            'sex' => "2"
+        ],
+        [
+            'name' => "ナイキジャケット",
+            'species' => "ジャケット", // chủng loại 
+            'img_url'=> "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/83c928bd-055b-446d-80e1-5927e6e88614/brooklyn-nets-showtime-city-edition-dri-fit-nba-long-sleeve-jacket-W8JJ2Q.png", // link ảnh
+            'description' => "ナイキ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "200", // giá cả
+            'style' => "1",
+            'sex' => "1"
+        ],
+        [
+            'name' => "ナイキジャケット",
+            'species' => "ジャケット", // chủng loại 
+            'img_url'=> "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7d543e4f-6e4c-489d-a4bf-cb7f0d2d3d94/air-poly-knit-jacket-6fCCk6.png", // link ảnh
+            'description' => "ナイキ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "100", // giá cả
+            'style' => "3",
+            'sex' => "1"
+        ],
+        [
+            'name' => "アディダスウェア",
+            'species' => "ウェア", // chủng loại 
+            'img_url'=> "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/4f60b59dc26e4a14b67dad0b0060ef12_9366/Ao_khoac_the_thao_Adicolor_Classics_Primeblue_SST_Mau_xanh_da_troi_H06710_21_model.jpg", // link ảnh
+            'description' => "アディダス",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "100", // giá cả
+            'style' => "0",
+            'sex' => "1"
+        ],
+        [
+            'name' => "アディダスジャケット",
+            'species' => "ジャケット", // chủng loại 
+            'img_url'=> "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/90c518d225924a3eb9acaa0100223ae9_9366/N_FAB_MID_LAYER_trang_EH3685_01_laydown.jpg", // link ảnh
+            'description' => "アディダス",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "150", // giá cả
+            'style' => "0",
+            'sex' => "1"
+        ],
         ]
     );
     }
