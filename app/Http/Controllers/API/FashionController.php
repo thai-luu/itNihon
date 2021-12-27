@@ -58,8 +58,9 @@ class FashionController extends Controller
         if ($fashion == null) {
             return response()->json(['error' =>'not found'], 404);
         }
-        foreach($fashion->sizes as $size) {
+        foreach($fashion->sizes as $size) {            
             $size->quantity = $size->pivot->quantity;
+            $size->size_id = $size->pivot->size_id;
             unset($size->pivot);
         }
         return $fashion;

@@ -28,4 +28,7 @@ Route::post('updateUser/{id}', 'API\UserController@update');
 Route::post('logout', 'API\UserController@logout');
 Route::get('recommended', 'API\UserController@recommended');
 Route::get('showRecommended/{id}', 'API\FashionController@showRecommended');
+Route::post('doOrder', 'API\OrderController@store');
+Route::get('showOrder/{id}', 'API\OrderController@show');
+Route::get('showAllOrder', 'API\OrderController@showAllOrder');
 });
