@@ -83,7 +83,19 @@ h1#logo a {
 	float:left;
 	width:239px;
 	height:49px;
-	background:url('images/logo.gif') no-repeat 0 0;
+	font-size:0;
+	line-height:0;
+	text-indent:-4000px;
+}
+h1#logo1 {
+	position:absolute;
+	top:37px;
+	left:0;
+}
+h1#logo1 a {
+	float:left;
+	width:239px;
+	height:49px;
 	font-size:0;
 	line-height:0;
 	text-indent:-4000px;

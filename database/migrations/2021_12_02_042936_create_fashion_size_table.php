@@ -15,8 +15,8 @@ class CreateFashionSizeTable extends Migration
     {
         Schema::create('fashion_size', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('fashion_id')->constrained();
-            $table->foreignId('size_id')->constrained();
+            $table->foreignId('fashion_id')->references('id')->on('fashions')->onDelete('cascade');
+            $table->foreignId('size_id')->references('id')->on('sizes')->onDelete('cascade');
             $table->integer('quantity')->default(0);
         });
     }

@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::prefix('admin')->group(function () {
-    Route::resource('fashion', FashionController::class);
+    Route::resource('fashion', FashionController::class,['middleware' => 'auth']);
+    Route::get('fashion/delete/{id}','FashionController@delete',['middleware' => 'auth']);
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'FashionController@index',['middleware' => 'auth'])->name('home');

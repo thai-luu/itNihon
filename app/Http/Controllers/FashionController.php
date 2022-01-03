@@ -18,7 +18,7 @@ class FashionController extends Controller
      */
     public function index()
     {
-        $fashions = Fashion::paginate(20);
+        $fashions = Fashion::paginate(8);
         
         return view('fashion.index',compact('fashions'));
     }
@@ -50,6 +50,7 @@ class FashionController extends Controller
             'img_url' => 'required',
             'sold' => 'required',
             'price' => 'required',
+            'quantity' => 'required',
         ]);
         
 if ($validator->fails()) { 
@@ -58,17 +59,24 @@ if ($validator->fails()) {
             ->withInput();
         }
 else{
-        $fashion = new Fashion;
-        $fashion->name = $request->name;
-        $fashion->species = $request->species;
-        $fashion->description = $request->description;
-        $fashion->style = $request->style;
-        $fashion->sex = $request->sex;
-        $fashion->img_url = $request->img_url;
-        $fashion->sold = $request->sold;
-        $fashion->price = $request->price;
-        $fashion->save();
-        $message = 'Sản phẩm '  . $fashion->name .' được tạo thành công  ';
+    $fashion_id = DB::table('fashions')->insertGetId([
+        'name'      => $request->name,
+        'species'   => $request->species,
+        'description' => $request->description,
+        'style' => $request->style,
+        'sex' => $request->sex,
+        'img_url' => $request->img_url,
+        'sold' => $request->sold,
+        'price' => $request->price
+    ]
+        );
+        for($i = 1; $i <= 5; $i++){
+            DB::table('fashion_size')->insert([
+                ['fashion_id' => $fashion_id, 'size_id' => $i, 'quantity' => $request->quantity],
+            ]);
+        }
+        
+        $message = 'Sản phẩm '  . $request->name .' được tạo thành công  ';
         return redirect()->route('fashion.create')->with('message', $message);
     }
 }
@@ -81,7 +89,9 @@ else{
      */
     public function show($id)
     {
-        //
+        $fashion = Fashion::find($id);
+        
+        return view('fashion.detail',compact('fashion'));
     }
 
     /**
@@ -104,7 +114,44 @@ else{
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = Validator::make($request->all(), [ 
+            'name' => 'required', 
+            'species' => 'required', 
+            'description' => 'required', 
+            'style' => 'required', 
+            'sex' => 'required', 
+            'img_url' => 'required',
+            'sold' => 'required',
+            'price' => 'required',
+           // 'quantity' => 'required',
+        ]);
+        
+if ($validator->fails()) { 
+            return redirect(route('fashion.create'))
+            ->withErrors($validator)
+            ->withInput();
+        }
+else{
+    $fashion_id = DB::table('fashions')->where('id',$id)->update([
+        'name'      => $request->name,
+        'species'   => $request->species,
+        'description' => $request->description,
+        'style' => $request->style,
+        'sex' => $request->sex,
+        'img_url' => $request->img_url,
+        'sold' => $request->sold,
+        'price' => $request->price
+    ]
+        );
+        // for($i = 1; $i <= 5; $i++){
+        //     DB::table('fashion_size')->insert([
+        //         ['fashion_id' => $fashion_id, 'size_id' => $i, 'quantity' => $request->quantity],
+        //     ]);
+        // }
+        
+        $message = 'Sản phẩm '  . $request->name .' được cập nhật thành công  ';
+        return redirect()->route('fashion.create')->with('message', $message);
+    }
     }
 
     /**
@@ -115,6 +162,17 @@ else{
      */
     public function destroy($id)
     {
-        //
+        
+    }
+    public function delete($id)
+    {
+       
+        DB::table('fashions')
+              ->where('id', '=', $id)
+              ->delete();
+              $message = 'success';
+              $fashions = Fashion::paginate(6);
+        
+              return view('fashion.index',compact('fashions','message'));
     }
 }

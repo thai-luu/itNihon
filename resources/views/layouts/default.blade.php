@@ -11,8 +11,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" media="all" />
     <div id="shell">
+      
         <div id="header">
-            <h1 id="logo"><a href="#">Fashion</a></h1>
+            <h1 id="logo1"><a href="/admin/fashion">FASHION</a></h1>
             <div class="social"> <span>FOLLOW US ON:</span>
               <ul>
                 <li><a class="twitter" href="#">twitter</a></li>
@@ -25,7 +26,36 @@
               <ul>
                 <li><a class="active" href="/admin/fashion">HOME</a></li>
               </ul>
+              <ul>
+                <!-- Authentication Links -->
+                @guest
+                    @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                    @endif
+                @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
+            </ul>
             </div>
+            
             <div id="sub-navigation">
               <ul>
                 <li><a href="/admin/fashion/create">Add </a></li>

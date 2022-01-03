@@ -57,6 +57,10 @@
       <label for="exampleInputPassword1">Price: </label>
       <input type="number" class="form-control" name="price" id="exampleInputPassword1" placeholder="">
     </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Quantity: </label>
+      <input type="number" class="form-control" name="quantity" id="exampleInputPassword1" placeholder="">
+    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 @endsection
