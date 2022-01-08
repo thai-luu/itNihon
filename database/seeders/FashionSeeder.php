@@ -414,6 +414,86 @@ class FashionSeeder extends Seeder
             'style' => 0,
             'sex' => 1
         ],
+        [
+            'name' => "プーマスポーツウェア",
+            'species' => "スポーツウェア", // chủng loại 
+            'img_url'=> "https://cf.shopee.vn/file/7cc8841443f47088d99b0d80241a0982", // link ảnh
+            'description' => "プーマ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "500", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
+        ],
+        [
+            'name' => "アディダススポーツウェア",
+            'species' => "スポーツウェア", // chủng loại 
+            'img_url'=> "https://assets.adidas.com/images/w_600,f_auto,q_auto/d37f4d4779544be0906aaa4500b8434e_9366/Bo_djo_the_thao_DJen_ED6215_01_laydown.jpg", // link ảnh
+            'description' => "アディダス",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "500", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
+        ],
+        [
+            'name' => "ナイキスポーツウェア",
+            'species' => "スポーツウェア", // chủng loại 
+            'img_url'=> "https://img.yes24.vn/Upload/ProductImage/istyle24_Sports/1353553_L.jpg", // link ảnh
+            'description' => "ナイキ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "1000", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
+        ],
+        [
+            'name' => "チャンピオンスポーツウェア",
+            'species' => "スポーツウェア", // chủng loại 
+            'img_url'=> "https://cf.shopee.vn/file/add0abc3a7d0b3a9964b6ab49e2c4605", // link ảnh
+            'description' => "チャンピオン",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "2500", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
+        ],
+        [
+            'name' => "ユニクロスポーツウェア",
+            'species' => "スポーツウェア", // chủng loại 
+            'img_url'=> "https://scontent.webpluscnd.net/photos-df/a-0/1912-2075675-1/bo-do-nam-uniqlo-mr18.png?atk=cb37c7391e146d0afb89176b97d5fa21", // link ảnh
+            'description' => "ユニクロ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "1500", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
+        ],
+        [
+            'name' => "グッチスーツ",
+            'species' => "スーツ", // chủng loại 
+            'img_url'=> "https://cf.shopee.vn/file/84ec43ac5d0dfb5210c12e133fe5a6c8", // link ảnh
+            'description' => "グッチ",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "5000", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
+        ],
+        [
+            'name' => "シャネルスーツ",
+            'species' => "スーツ", // chủng loại 
+            'img_url'=> "https://i-ione.vnecdn.net/2021/09/19/jennie-chanel-6-4301-1632061782.jpg", // link ảnh
+            'description' => "シャネル",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "4000", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
+        ],
+        [
+            'name' => "ルイヴィトンスーツ",
+            'species' => "スーツ", // chủng loại 
+            'img_url'=> "https://i.pinimg.com/originals/87/f8/2a/87f82a22dd41d2f708c61c0b579d7825.png", // link ảnh
+            'description' => "ルイヴィトン",
+            'sold'=> "200", // số lượng đã bán
+            'price' => "6000", // giá cả
+            'style' => "unknown",
+            'sex' => rand(0, 2)
+        ],
         ]
     );
     }
