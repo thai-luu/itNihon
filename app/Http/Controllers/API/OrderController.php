@@ -16,11 +16,19 @@ class OrderController extends Controller
     {
         if (Auth::check()) {
             $user = Auth::user();
+
+            $items = json_decode($request->json_items, true)['items'];
+            foreach( $items as $item ){
+                $fashion = Fashion::where('id', $item['id'])->with('sizes:name')->first();
+                if($fashion->sizes[$item['size_id'] - 1]->pivot->quantity - $item['quantity'] < 0 ){
+                    return response()->json(['error' => 'not_enough_quantity', 'fashion_id' => $item['id']], 500);
+                }
+            }
+
             $order = new Order();
             $order->user_id = $user->id;
             $order->total_price = 0;
-            $order->save();
-            $items = json_decode($request->json_items, true)['items'];
+            $order->save();            
             
             foreach( $items as $item ){
                 $orderDetail = new OrderDetail();
