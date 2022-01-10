@@ -5,23 +5,45 @@
 @endif
 
   <div class="row" data-aos="zoom-in" data-aos-delay="100">
-@foreach($fashions as $fashion)
-<div class="card" style="width: 18rem; margin-top: 20px; margin-left: 20px;">
-  <a href="/admin/fashion/{{$fashion->id}}">
-  <img src="{{$fashion->img_url}}" class="card-img-top" alt="...">
-</a>
-  <div class="card-body">
-    <p class="card-text" style="color: black; font-size: 20px;">{{$fashion->name}}</p>
-    <p class="card-text" style="color: black; font-size: 20px;">{{$fashion->species}}</p>
-    <p class="card-text" style="color: black; font-size: 20px;">{{$fashion->price}}</p>
-  </div>
-</div>
-<br>
-@endforeach
-
+    <table class="table" style="background: whitesmoke">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Image</th>
+          <th scope="col">Name</th>
+          <th scope="col">Species</th>
+          <th scope="col">Sold</th>
+          <th scope="col">Price</th>
+          <th scope="col">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach($fashions as $fashion)
+        <tr>
+          <td scope="row">{{$fashion->id}}</td>
+          <td id="tdImage"><img src="{{$fashion->img_url}}" alt="" id="image"></td>
+          <td>{{$fashion->name}}</td>
+          <td>{{$fashion->species}}</td>
+          <td>{{$fashion->sold}}</td>
+          <td>{{$fashion->price}}</td>
+          <td><a href="/admin/fashion/{{$fashion->id}}"><i class="fas fa-edit"></i></a></td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
 </div>
 <br>
 <div>  
 {{ $fashions->links('vendor.pagination.bootstrap-4') }}
 </div>
 @endsection
+
+<style>
+  #image{
+    object-fit: contain;
+    width: 50%;
+  }
+  #tdImage{
+    width: 10%;
+  }
+</style>

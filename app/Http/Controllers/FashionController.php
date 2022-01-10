@@ -143,12 +143,12 @@ else{
         'price' => $request->price
     ]
         );
-        // for($i = 1; $i <= 5; $i++){
-        //     DB::table('fashion_size')->insert([
-        //         ['fashion_id' => $fashion_id, 'size_id' => $i, 'quantity' => $request->quantity],
-        //     ]);
-        // }
-        
+        $input = $request->all();
+        for($i = 1;$i < 6;$i++){
+        DB::table('fashion_size')->where('fashion_id',$id)->where('size_id',$i)->update([
+             'quantity' => $input['quantity'.$i]
+        ]);
+    }
         $message = 'Sản phẩm '  . $request->name .' được cập nhật thành công  ';
         return redirect()->route('fashion.create')->with('message', $message);
     }

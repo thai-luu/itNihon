@@ -1,10 +1,16 @@
 @extends('layouts.default')
 @section('content')
+@if(session('message'))
+<div class="alert alert-success" role="alert">{{ session('message') }}</div>
+
+@endif
 <div class="container" style="background:gray;">
     <img id="image" src="{{$fashion->img_url}}" alt="">
 
 </div>
 <br>
+<div id="getSex" style="display: none">{{$fashion->sex}}</div>
+<div id="getStyle" style="display: none">{{$fashion->style}}</div>
 <div id="infoCast" style=""> 
     <font color= "white">
         <form action="/admin/fashion/{{$fashion->id}}" method="post" > 
@@ -24,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Style: </label>
-                <select name="style" id="">
+                <select name="style" id="style">
                     <option value="0"> All </option>
                     <option value="1"> <=20 </option>
                     <option value="2"> 21 - 25 </option>
@@ -35,7 +41,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Sex: </label>
-                <select name="sex" id="">
+                <select name="sex" id="sex">
                     <option value="2"> Unisex </option>
                     <option value="0"> woman </option>
                     <option value="1"> human </option>
@@ -54,8 +60,18 @@
               <input type="number" class="form-control" name="price" id="exampleInputPassword1" placeholder="" value="{{$fashion->price}}">
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Quantity: </label>
-              <input type="number" class="form-control" name="quantity" id="exampleInputPassword1" placeholder="" value="{{$fashion->quantity}}">
+              <label for="exampleInputPassword1">Quantity </label>
+              <br>
+              <label for="exampleInputPassword1">Size S: </label>
+              <input type="number" class="form-control" name="quantity1" id="exampleInputPassword1" placeholder="" value="{{$fashion->sizes[0]->pivot->quantity}}">
+              <label for="exampleInputPassword1">Size M: </label>
+              <input type="number" class="form-control" name="quantity2" id="exampleInputPassword1" placeholder="" value="{{$fashion->sizes[1]->pivot->quantity}}">
+              <label for="exampleInputPassword1">Size L: </label>
+              <input type="number" class="form-control" name="quantity3" id="exampleInputPassword1" placeholder="" value="{{$fashion->sizes[2]->pivot->quantity}}">
+              <label for="exampleInputPassword1">Size XL: </label>
+              <input type="number" class="form-control" name="quantity4" id="exampleInputPassword1" placeholder="" value="{{$fashion->sizes[3]->pivot->quantity}}">
+              <label for="exampleInputPassword1">Size XXL: </label>
+              <input type="number" class="form-control" name="quantity5" id="exampleInputPassword1" placeholder="" value="{{$fashion->sizes[4]->pivot->quantity}}">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
             <a href="delete/{{$fashion->id}}"><div class="btn btn-primary">Delete</div></a>
@@ -63,6 +79,15 @@
   
 </font>
 </div>
+<script>
+
+  $(document).ready(function(){
+    var sex = $("#getSex").text();
+    var style = $("#getStyle").text();   
+    $("select#sex").val(sex).change();
+    $("select#style").val(style).change();
+});
+</script>
 @endsection
 <style>
     #image {
