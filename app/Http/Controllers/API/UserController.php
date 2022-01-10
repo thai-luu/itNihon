@@ -94,6 +94,7 @@ return response()->json(['success'=>$success], $this-> successStatus);
         $weight = $request->weight;
         $age = $request->age;
         $sex = $request->sex;
+        $address = $request->address;
         $user = User::find($id);
         if($user){
         $user->name = $name;
@@ -101,6 +102,7 @@ return response()->json(['success'=>$success], $this-> successStatus);
         $user->weight = $weight;
         $user->age = $age;
         $user->sex = $sex;
+        $user->address = $address;
         $user->save();
         return response()->json(['success' => $user], $this-> successStatus);
         }else{
