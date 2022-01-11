@@ -20,14 +20,6 @@
       
         <div id="header">
             <h1 id="logo1"><a href="/admin/fashion">FASHION</a></h1>
-            <div class="social"> <span>FOLLOW US ON:</span>
-              <ul>
-                <li><a class="twitter" href="#">twitter</a></li>
-                <li><a class="facebook" href="#">facebook</a></li>
-                <li><a class="vimeo" href="#">vimeo</a></li>
-                <li><a class="rss" href="#">rss</a></li>
-              </ul>
-            </div>
             <div id="navigation">
               <ul>
                 <li><a class="active" href="/admin/fashion">HOME</a></li>
@@ -46,14 +38,14 @@
                             {{ Auth::user()->name }}
                         </a>
 
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
+                        <div class="dropdown-menu" aria-labelledby=""  >
+                            <a class="dropdown-item" href="{{ route('logout') }}" style="color:blue"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="">
                                 @csrf
                             </form>
                         </div>

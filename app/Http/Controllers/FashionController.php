@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\FashionRequest;
 use App\Http\Controllers\Controller; 
 use App\Models\User; 
 use Illuminate\Support\Facades\Auth; 
@@ -112,7 +113,7 @@ else{
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(FashionRequest $request, $id)
     {
         $validator = Validator::make($request->all(), [ 
             'name' => 'required', 
@@ -123,11 +124,16 @@ else{
             'img_url' => 'required',
             'sold' => 'required',
             'price' => 'required',
-           // 'quantity' => 'required',
+            'quantity1' => 'required',
+            'quantity2' => 'required',
+            'quantity3' => 'required',
+            'quantity4' => 'required',
+            'quantity5' => 'required',
+            
         ]);
         
 if ($validator->fails()) { 
-            return redirect(route('fashion.create'))
+            return redirect(route('fashion.show',['fashion' => $id]))
             ->withErrors($validator)
             ->withInput();
         }
@@ -150,7 +156,7 @@ else{
         ]);
     }
         $message = 'Sản phẩm '  . $request->name .' được cập nhật thành công  ';
-        return redirect()->route('fashion.create')->with('message', $message);
+        return redirect()->route('fashion.show',['fashion' => $id])->with('message', $message);
     }
     }
 

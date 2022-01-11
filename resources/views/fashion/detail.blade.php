@@ -4,6 +4,13 @@
 <div class="alert alert-success" role="alert">{{ session('message') }}</div>
 
 @endif
+@if ($errors->any())
+    <ul>
+        @foreach ($errors->all() as $error)
+        <div class="alert alert-danger" role="alert">{{ $error }}</div>
+        @endforeach
+    </ul>
+@endif
 <div class="container" style="background:gray;">
     <img id="image" src="{{$fashion->img_url}}" alt="">
 
@@ -11,6 +18,7 @@
 <br>
 <div id="getSex" style="display: none">{{$fashion->sex}}</div>
 <div id="getStyle" style="display: none">{{$fashion->style}}</div>
+<div id="getId" style="display: none">{{$fashion->id}}</div>
 <div id="infoCast" style=""> 
     <font color= "white">
         <form action="/admin/fashion/{{$fashion->id}}" method="post" > 
@@ -18,15 +26,15 @@
             @method('PUT')
             <div class="form-group">
               <label for="exampleInputEmail1">Name: </label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" placeholder="" value="{{$fashion->name}}">
+              <input type="text" class="form-control" id="getname" aria-describedby="emailHelp" name="name" placeholder="" value="{{$fashion->name}}">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Species: </label>
-              <input type="text" class="form-control" name="species" id="exampleInputPassword1" placeholder="" value="{{$fashion->species}}">
+              <input type="text" class="form-control" name="species" id="getspecies" placeholder="" value="{{$fashion->species}}">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Description: </label>
-                <input type="text" class="form-control" name="description" id="exampleInputPassword1" placeholder="" value="{{$fashion->description}}">
+                <input type="text" class="form-control" name="description" id="getdescription" placeholder="" value="{{$fashion->description}}">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Style: </label>
@@ -49,31 +57,31 @@
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Image link: </label>
-              <input type="text" class="form-control" name="img_url" id="exampleInputPassword1" placeholder="" value="{{$fashion->img_url}}">
+              <input type="text" class="form-control" name="img_url" id="getimglink" placeholder="" value="{{$fashion->img_url}}">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Sold: </label>
-              <input type="number" class="form-control" name="sold" id="exampleInputPassword1" placeholder="" value="{{$fashion->sold}}">
+              <input type="number" class="form-control" name="sold" id="getsold" placeholder="" value="{{$fashion->sold}}">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Price: </label>
-              <input type="number" class="form-control" name="price" id="exampleInputPassword1" placeholder="" value="{{$fashion->price}}">
+              <input type="number" class="form-control" name="price" id="getprice" placeholder="" value="{{$fashion->price}}">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Quantity </label>
               <br>
               <label for="exampleInputPassword1">Size S: </label>
-              <input type="number" class="form-control" name="quantity1" id="exampleInputPassword1" placeholder="" value="{{$fashion->sizes[0]->pivot->quantity}}">
+              <input type="number" class="form-control" name="quantity1" id="getquantity1" placeholder="" value="{{$fashion->sizes[0]->pivot->quantity}}">
               <label for="exampleInputPassword1">Size M: </label>
-              <input type="number" class="form-control" name="quantity2" id="exampleInputPassword1" placeholder="" value="{{$fashion->sizes[1]->pivot->quantity}}">
+              <input type="number" class="form-control" name="quantity2" id="getquantity2" placeholder="" value="{{$fashion->sizes[1]->pivot->quantity}}">
               <label for="exampleInputPassword1">Size L: </label>
-              <input type="number" class="form-control" name="quantity3" id="exampleInputPassword1" placeholder="" value="{{$fashion->sizes[2]->pivot->quantity}}">
+              <input type="number" class="form-control" name="quantity3" id="getquantity3" placeholder="" value="{{$fashion->sizes[2]->pivot->quantity}}">
               <label for="exampleInputPassword1">Size XL: </label>
-              <input type="number" class="form-control" name="quantity4" id="exampleInputPassword1" placeholder="" value="{{$fashion->sizes[3]->pivot->quantity}}">
+              <input type="number" class="form-control" name="quantity4" id="getquantity4" placeholder="" value="{{$fashion->sizes[3]->pivot->quantity}}">
               <label for="exampleInputPassword1">Size XXL: </label>
-              <input type="number" class="form-control" name="quantity5" id="exampleInputPassword1" placeholder="" value="{{$fashion->sizes[4]->pivot->quantity}}">
+              <input type="number" class="form-control" name="quantity5" id="getquantity5" placeholder="" value="{{$fashion->sizes[4]->pivot->quantity}}">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id="btsm">Submit</button>
             <a href="delete/{{$fashion->id}}"><div class="btn btn-primary">Delete</div></a>
           </form>
   
@@ -86,6 +94,84 @@
     var style = $("#getStyle").text();   
     $("select#sex").val(sex).change();
     $("select#style").val(style).change();
+//     var name = $("#getname").text();
+//     var species = $("#getspecies").text();
+//     var description = $("#getdescription").text();
+//     var sold = $("#getsold").text();
+//     var imglink = $("#getimglink").text();
+//     var price = $("#getprice").text();
+//     var quantity1 = $("#getquantity1").text();
+//     var quantity2 = $("#getquantity2").text();
+//     var quantity3 = $("#getquantity3").text();
+//     var quantity4 = $("#getquantity4").text();
+//     var quantity5 = $("#getquantity5").text();
+//     $("#getname").change(function(){
+//       if(!name || !species || !description||!sold||!imglink||!price||!quantity1||!quantity2||!quantity3||!quantity4||!quantity5 ){
+//   alert("infomation is required.");
+//   $("#btsm").css("display-color","none");
+//       }
+// });
+// $("#getspecies").change(function(){
+//       if(!name || !species || !description||!sold||!imglink||!price||!quantity1||!quantity2||!quantity3||!quantity4||!quantity5 ){
+//   alert("infomation is required.");
+//   $("#btsm").css("display-color","none");
+//       }
+// });
+// $("#getdescription").change(function(){
+//       if(!name || !species || !description||!sold||!imglink||!price||!quantity1||!quantity2||!quantity3||!quantity4||!quantity5 ){
+//   alert("infomation is required.");
+//   $("#btsm").css("display-color","none");
+//       }
+// });
+// $("#getsold").change(function(){
+//       if(!name || !species || !description||!sold||!imglink||!price||!quantity1||!quantity2||!quantity3||!quantity4||!quantity5 ){
+//   alert("infomation is required.");
+//   $("#btsm").css("display-color","none");
+//       }
+// });
+// $("#getimglink").change(function(){
+//       if(!name || !species || !description||!sold||!imglink||!price||!quantity1||!quantity2||!quantity3||!quantity4||!quantity5 ){
+//   alert("infomation is required.");
+//   $("#btsm").css("display-color","none");
+//       }
+// });
+// $("#getprice").change(function(){
+//       if(!name || !species || !description||!sold||!imglink||!price||!quantity1||!quantity2||!quantity3||!quantity4||!quantity5 ){
+//   alert("infomation is required.");
+//   $("#btsm").css("display-color","none");
+//       }
+// });
+// $("#getquantity1").change(function(){
+//       if(!name || !species || !description||!sold||!imglink||!price||!quantity1||!quantity2||!quantity3||!quantity4||!quantity5 ){
+//   alert("infomation is required.");
+//   $("#btsm").css("display-color","none");
+//       }
+// });
+// $("#getquantity2").change(function(){
+//       if(!name || !species || !description||!sold||!imglink||!price||!quantity1||!quantity2||!quantity3||!quantity4||!quantity5 ){
+//   alert("infomation is required.");
+//   $("#btsm").css("display-color","none");
+//       }
+// });
+// $("#getquantity3").change(function(){
+//       if(!name || !species || !description||!sold||!imglink||!price||!quantity1||!quantity2||!quantity3||!quantity4||!quantity5 ){
+//   alert("infomation is required.");
+//   $("#btsm").css("display-color","none");
+//       }
+// });
+// $("#getquantity4").change(function(){
+//       if(!name || !species || !description||!sold||!imglink||!price||!quantity1||!quantity2||!quantity3||!quantity4||!quantity5 ){
+//   alert("infomation is required.");
+//   $("#btsm").css("display-color","none");
+//       }
+// });
+// $("#getquantity5").change(function(){
+//       if(!name || !species || !description||!sold||!imglink||!price||!quantity1||!quantity2||!quantity3||!quantity4||!quantity5 ){
+//   alert("infomation is required.");
+//   $("#btsm").css("display-color","none");
+//       }
+// });
+          
 });
 </script>
 @endsection

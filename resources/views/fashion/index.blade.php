@@ -26,7 +26,7 @@
           <td>{{$fashion->species}}</td>
           <td>{{$fashion->sold}}</td>
           <td>{{$fashion->price}}</td>
-          <td><a href="/admin/fashion/{{$fashion->id}}"><i class="fas fa-edit"></i></a></td>
+          <td><a href="/admin/fashion/{{$fashion->id}}">Edit</a></td>
         </tr>
         @endforeach
       </tbody>
