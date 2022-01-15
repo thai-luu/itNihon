@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->float('weight')->nullable();
             $table->integer('sex')->nullable();
             $table->string('address')->nullable();
+            $table->integer('role')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
