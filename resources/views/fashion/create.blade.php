@@ -16,15 +16,15 @@
     @csrf
     <div class="form-group">
       <label for="exampleInputEmail1">Name: </label>
-      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" placeholder="">
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required  name="name" placeholder="Name is required">
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Species: </label>
-      <input type="text" class="form-control" name="species" id="exampleInputPassword1" placeholder="">
+      <input type="text" class="form-control" name="species" id="exampleInputPassword1" required  placeholder="Species is required">
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Description: </label>
-        <input type="text" class="form-control" name="description" id="exampleInputPassword1" placeholder="">
+        <input type="text" class="form-control" name="description" id="exampleInputPassword1" required placeholder="Description is required">
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Style: </label>
@@ -51,15 +51,18 @@
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Sold: </label>
-      <input type="number" class="form-control" name="sold" id="exampleInputPassword1" placeholder="">
+      <input type="text" class="form-control" name="sold" id="exampleInputPassword1" min="0" pattern="[0-9]{1,8}"
+      title="Sold is number(min is 0 max 100000000)" placeholder="">
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Price: </label>
-      <input type="number" class="form-control" name="price" id="exampleInputPassword1" placeholder="">
+      <input type="text" class="form-control" name="price" id="exampleInputPassword1" min="0" pattern="[0-9]{1,8}"
+      title="Price is number(min is 0 max 100000000)" placeholder="">
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Quantity: </label>
-      <input type="number" class="form-control" name="quantity" id="exampleInputPassword1" placeholder="">
+      <input type="text" class="form-control" name="quantity" id="exampleInputPassword1" min="0" pattern="[0-9]{1,8}"
+      title="Quantity is number(min is 0 max 100000000)" placeholder="">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

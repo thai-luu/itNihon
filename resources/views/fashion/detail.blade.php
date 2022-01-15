@@ -61,25 +61,32 @@
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Sold: </label>
-              <input type="number" class="form-control" name="sold" id="getsold" placeholder="" value="{{$fashion->sold}}">
+              <input type="text" class="form-control" name="sold" id="getsold" placeholder=""  pattern="[0-9]{1,8}"
+              title="Sold is number(min is 0 max 100000000)" value="{{$fashion->sold}}">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Price: </label>
-              <input type="number" class="form-control" name="price" id="getprice" placeholder="" value="{{$fashion->price}}">
+              <input type="text" class="form-control" name="price" id="getprice" placeholder=""  pattern="[0-9]{1,8}"
+              title="Price is number(min is 0 max 100000000)" value="{{$fashion->price}}">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Quantity </label>
               <br>
               <label for="exampleInputPassword1">Size S: </label>
-              <input type="number" class="form-control" name="quantity1" id="getquantity1" placeholder="" value="{{$fashion->sizes[0]->pivot->quantity}}">
+              <input type="text" class="form-control" name="quantity1" id="getquantity1" placeholder=""  pattern="[0-9]{1,8}"
+              title="Size is number(min is 0 max 100000000)" value="{{$fashion->sizes[0]->pivot->quantity}}">
               <label for="exampleInputPassword1">Size M: </label>
-              <input type="number" class="form-control" name="quantity2" id="getquantity2" placeholder="" value="{{$fashion->sizes[1]->pivot->quantity}}">
+              <input type="text" class="form-control" name="quantity2" id="getquantity2" placeholder=""  pattern="[0-9]{1,8}"
+              title="Size is number(min is 0 max 100000000)" value="{{$fashion->sizes[1]->pivot->quantity}}">
               <label for="exampleInputPassword1">Size L: </label>
-              <input type="number" class="form-control" name="quantity3" id="getquantity3" placeholder="" value="{{$fashion->sizes[2]->pivot->quantity}}">
+              <input type="text" class="form-control" name="quantity3" id="getquantity3" placeholder=""  pattern="[0-9]{1,8}"
+              title="Size is number(min is 0 max 100000000)" value="{{$fashion->sizes[2]->pivot->quantity}}">
               <label for="exampleInputPassword1">Size XL: </label>
-              <input type="number" class="form-control" name="quantity4" id="getquantity4" placeholder="" value="{{$fashion->sizes[3]->pivot->quantity}}">
+              <input type="text" class="form-control" name="quantity4" id="getquantity4" placeholder=""  pattern="[0-9]{1,8}"
+              title="Size is number(min is 0 max 100000000)" value="{{$fashion->sizes[3]->pivot->quantity}}">
               <label for="exampleInputPassword1">Size XXL: </label>
-              <input type="number" class="form-control" name="quantity5" id="getquantity5" placeholder="" value="{{$fashion->sizes[4]->pivot->quantity}}">
+              <input type="text" class="form-control" name="quantity5" id="getquantity5" placeholder=""  pattern="[0-9]{1,8}"
+              title="Size is number(min is 0 max 100000000)" value="{{$fashion->sizes[4]->pivot->quantity}}">
             </div>
             <button type="submit" class="btn btn-primary" id="btsm">Submit</button>
             <a href="delete/{{$fashion->id}}"><div class="btn btn-primary">Delete</div></a>

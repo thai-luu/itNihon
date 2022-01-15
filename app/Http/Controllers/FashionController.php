@@ -77,7 +77,7 @@ else{
             ]);
         }
         
-        $message = 'Sản phẩm '  . $request->name .' được tạo thành công  ';
+        $message = $request->name .' created successfully ';
         return redirect()->route('fashion.create')->with('message', $message);
     }
 }
@@ -155,7 +155,7 @@ else{
              'quantity' => $input['quantity'.$i]
         ]);
     }
-        $message = 'Sản phẩm '  . $request->name .' được cập nhật thành công  ';
+        $message = $request->name .' updated successfully ';
         return redirect()->route('fashion.show',['fashion' => $id])->with('message', $message);
     }
     }
