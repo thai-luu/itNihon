@@ -19,7 +19,7 @@
       </thead>
       <tbody>
         @foreach($fashions as $fashion)
-        <tr>
+        <tr style="height: 100px">
           <td scope="row">{{$fashion->id}}</td>
           <td id="tdImage"><img src="{{$fashion->img_url}}" alt="" id="image"></td>
           <td>{{$fashion->name}}</td>
@@ -45,5 +45,6 @@
   }
   #tdImage{
     width: 10%;
+    height: 10%;
   }
 </style>
