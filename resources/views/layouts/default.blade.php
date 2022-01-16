@@ -16,10 +16,17 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/plugins/images/favicon.png">
     <!-- Custom CSS -->
-    <link href="plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
+    <link href="/plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
     <!-- Custom CSS -->
     <link href="/css/style.min.css" rel="stylesheet">
+    
+    <style>
+        .dcmquang:hover{
+            background-color: #fcd7d7 !important;
+        }
+            
+    </style>
 </head>
 
 <body>
@@ -27,67 +34,54 @@
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
     
-   <header class="topbar" data-navbarbg="skin5">
+   <header class="" data-navbarbg="skin5" style="height: 100px; background-color:#EEEEEE">
     <div id="">
-        <div id="">
-            <h1 id=""><a href="/admin/fashion">FASHION</a></h1>
-            <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+        <div id="" style="display: flex !important;margin-left: 15px">
+            <h1 id="" style="margin-top:20px"><a href="/admin/fashion" style="font-family: monospace !important ">Admin page</a></h1>
+    
                    
                 <!-- ============================================================== -->
                 <!-- Right side toggle and nav items -->
                 <!-- ============================================================== -->
                 <ul class="navbar-nav ms-auto d-flex align-items-center">
-                    <li><a class="" href="/admin/fashion">HOME</a></li>
-                    <!-- ============================================================== -->
-                    <!-- Search -->
-                    <!-- ============================================================== -->
-                    <li class=" in">
-                        <form role="search" class="app-search d-none d-md-block me-3">
-                            <input type="text" placeholder="Search..." class="form-control mt-0">
-                            <a href="" class="active">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </form>
-                    </li>
-                    <!-- ============================================================== -->
-                    <!-- User profile and search -->
-                    <!-- ============================================================== -->
-                    <li>
-                        <a class="profile-pic" href="#">
-                            <img src="plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><span class="text-white font-medium">Steave</span></a>
-                    </li>
-                    <!-- ============================================================== -->
-                    <!-- User profile and search -->
-                    <!-- ============================================================== -->
-                </ul>
-            </div>
+                    
+             
 
-              <ul>
+
+     
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
-                        <li class="" style="margin-top: 100px">
-                            <a class="" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
+                   
+                        <a class="dcmquang" href="{{ route('login') }}" style="background-color: #D8D8D8;
+                        padding: 10px;
+                        border-radius: 10px;
+                        margin-right: 50px;
+                        margin-top: 20px;
+                        width: 100px;
+                        text-align: center">
+                            {{ __('Login') }}</a>
+                </a>
+          
                     @endif
                 @else
-                    <li class="" >
-                        <a id="" class="" href="#" role="button">
-                            {{ Auth::user()->name }}
-                        </a>
-
-                        <div class="" aria-labelledby=""  >
-                            <a class="" href="{{ route('logout') }}" style="color:blue"
+                        
+                            <a class="dcmquang" href="{{ route('logout') }}" style="background-color: #D8D8D8;
+                            padding: 10px;
+                            border-radius: 10px;
+                            margin-right: 50px;
+                            margin-top: 20px;
+                            width: 100px;
+                            text-align: center"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="">
                                 @csrf
                             </form>
-                        </div>
-                    </li>
+                       
+                  
                 @endguest
             </ul>
             </div> 
@@ -96,19 +90,26 @@
    </header>
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
-        <aside class="left-sidebar" data-sidebarbg="skin6" style="margin-top: 100px">
+        <aside class="left-sidebar" data-sidebarbg="skin6" style="margin-top: 100px; background-color: darkslategrey !important">
             <!-- Sidebar scroll-->
+            
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <!-- User Profile-->
-                        
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/fashion"
+                                aria-expanded="false">
+                                <i class="fa fa-user" aria-hidden=""></i>
+                                <span class="hide-menu">All clothes</span>
+                            </a>
+                        </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/fashion/create"
                                 aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden=""></i>
-                                <span class="hide-menu">Clothing manager</span>
+                                <span class="hide-menu">Add clothes</span>
                             </a>
                         </li>
                     </ul>

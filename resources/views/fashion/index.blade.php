@@ -21,7 +21,7 @@
         @foreach($fashions as $fashion)
         <tr style="height: 100px">
           <td scope="row">{{$fashion->id}}</td>
-          <td id="tdImage"><img src="{{$fashion->img_url}}" alt="" id="image"></td>
+          <td id="tdImage"><img src="{{$fashion->img_url}}" alt="" id="image" style="object-fit: cover"></td>
           <td>{{$fashion->name}}</td>
           <td>{{$fashion->species}}</td>
           <td>{{$fashion->sold}}</td>
