@@ -11,7 +11,8 @@
         @endforeach
     </ul>
 @endif
-<div class="container" style="background:gray;">
+<div class="container" style=" height: 700px;
+width: 700px">
     <img id="image" src="{{$fashion->img_url}}" alt="">
 
 </div>
@@ -25,19 +26,19 @@
             @csrf
             @method('PUT')
             <div class="form-group">
-              <label for="exampleInputEmail1">Name: </label>
+              <label for="exampleInputEmail1" style="color: black">Name: </label>
               <input type="text" class="form-control" id="getname" aria-describedby="emailHelp" name="name" placeholder="" value="{{$fashion->name}}">
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Species: </label>
+              <label for="exampleInputPassword1" style="color: black">Species: </label>
               <input type="text" class="form-control" name="species" id="getspecies" placeholder="" value="{{$fashion->species}}">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Description: </label>
+                <label for="exampleInputPassword1" style="color: black">Description: </label>
                 <input type="text" class="form-control" name="description" id="getdescription" placeholder="" value="{{$fashion->description}}">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Style: </label>
+                <label for="exampleInputPassword1" style="color: black">Style: </label>
                 <select name="style" id="style">
                     <option value="0"> All </option>
                     <option value="1"> <=20 </option>
@@ -48,7 +49,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Sex: </label>
+                <label for="exampleInputPassword1" style="color: black">Sex: </label>
                 <select name="sex" id="sex">
                     <option value="2"> Unisex </option>
                     <option value="0"> woman </option>
@@ -56,40 +57,40 @@
                 </select>
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Image link: </label>
+              <label for="exampleInputPassword1" style="color: black">Image link: </label>
               <input type="text" class="form-control" name="img_url" id="getimglink" placeholder="" value="{{$fashion->img_url}}">
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Sold: </label>
+              <label for="exampleInputPassword1" style="color: black">Sold: </label>
               <input type="text" class="form-control" name="sold" id="getsold" placeholder=""  pattern="[0-9]{1,8}"
               title="Sold is number(min is 0 max 100000000)" value="{{$fashion->sold}}">
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Price: </label>
+              <label for="exampleInputPassword1" style="color: black">Price: </label>
               <input type="text" class="form-control" name="price" id="getprice" placeholder=""  pattern="[0-9]{1,8}"
               title="Price is number(min is 0 max 100000000)" value="{{$fashion->price}}">
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Quantity </label>
+              <label for="exampleInputPassword1" style="color: black">Quantity </label>
               <br>
-              <label for="exampleInputPassword1">Size S: </label>
+              <label for="exampleInputPassword1" style="color: black">Size S: </label>
               <input type="text" class="form-control" name="quantity1" id="getquantity1" placeholder=""  pattern="[0-9]{1,8}"
               title="Size is number(min is 0 max 100000000)" value="{{$fashion->sizes[0]->pivot->quantity}}">
-              <label for="exampleInputPassword1">Size M: </label>
+              <label for="exampleInputPassword1" style="color: black">Size M: </label>
               <input type="text" class="form-control" name="quantity2" id="getquantity2" placeholder=""  pattern="[0-9]{1,8}"
               title="Size is number(min is 0 max 100000000)" value="{{$fashion->sizes[1]->pivot->quantity}}">
-              <label for="exampleInputPassword1">Size L: </label>
+              <label for="exampleInputPassword1" style="color: black">Size L: </label>
               <input type="text" class="form-control" name="quantity3" id="getquantity3" placeholder=""  pattern="[0-9]{1,8}"
               title="Size is number(min is 0 max 100000000)" value="{{$fashion->sizes[2]->pivot->quantity}}">
-              <label for="exampleInputPassword1">Size XL: </label>
+              <label for="exampleInputPassword1" style="color: black">Size XL: </label>
               <input type="text" class="form-control" name="quantity4" id="getquantity4" placeholder=""  pattern="[0-9]{1,8}"
               title="Size is number(min is 0 max 100000000)" value="{{$fashion->sizes[3]->pivot->quantity}}">
-              <label for="exampleInputPassword1">Size XXL: </label>
+              <label for="exampleInputPassword1" style="color: black">Size XXL: </label>
               <input type="text" class="form-control" name="quantity5" id="getquantity5" placeholder=""  pattern="[0-9]{1,8}"
               title="Size is number(min is 0 max 100000000)" value="{{$fashion->sizes[4]->pivot->quantity}}">
             </div>
-            <button type="submit" class="btn btn-primary" id="btsm">Submit</button>
-            <a href="delete/{{$fashion->id}}"><div class="btn btn-primary">Delete</div></a>
+            <button type="submit" class="btn btn-primary" id="btsm" >Submit</button>
+            <a href="delete/{{$fashion->id}}"><div class="btn btn-primary" >Delete</div></a>
           </form>
   
 </font>
@@ -190,5 +191,8 @@
 }
 #infoCast{
     height: 100%;
+}
+#image{
+  object-fit: fill;
 }
 </style>
