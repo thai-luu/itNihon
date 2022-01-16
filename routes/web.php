@@ -25,3 +25,5 @@ Route::prefix('admin')->group(function () {
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/home', 'FashionController@index',['middleware' => 'auth'])->name('home');
+
+
