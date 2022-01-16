@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+
 Route::prefix('admin')->group(function () {
     Route::resource('fashion', FashionController::class,['middleware' => 'auth']);
     Route::get('fashion/delete/{id}','FashionController@delete',['middleware' => 'auth']);
@@ -23,6 +21,9 @@ Route::prefix('admin')->group(function () {
 
 
 Auth::routes();
+Route::get('/', function () {
+    return redirect('/login');
+});
 Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
