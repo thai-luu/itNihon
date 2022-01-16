@@ -29,4 +29,3 @@ Route::get('/login', function () {
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/home', 'FashionController@index',['middleware' => 'auth'])->name('home');
 
-
