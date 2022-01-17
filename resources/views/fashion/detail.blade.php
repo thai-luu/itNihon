@@ -90,7 +90,7 @@ width: 700px">
               title="Size is number(min is 0 max 100000000)" value="{{$fashion->sizes[4]->pivot->quantity}}">
             </div>
             <button type="submit" class="btn btn-primary" id="btsm" >Submit</button>
-            <a href="delete/{{$fashion->id}}"><div class="btn btn-primary" >Delete</div></a>
+            <a href="delete/{{$fashion->id}}"><div class="btn btn-primary" id="btnDelete" onclick="return confirm('Are you sure to delete the item')">Delete</div></a>
           </form>
   
 </font>
@@ -102,6 +102,14 @@ width: 700px">
     var style = $("#getStyle").text();   
     $("select#sex").val(sex).change();
     $("select#style").val(style).change();
+//     $("#btnDelete").click(function(){
+//       if (confirm("Are you sure to delete the item") == true) {
+//         window.location.reload();
+// } else {
+//   window.location.reload(); 
+// }
+      
+//     })
 //     var name = $("#getname").text();
 //     var species = $("#getspecies").text();
 //     var description = $("#getdescription").text();
