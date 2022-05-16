@@ -16,8 +16,8 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/plugins/images/favicon.png">
     <!-- Custom CSS -->
-    <link href="plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
+    <link href="/plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
     <!-- Custom CSS -->
     <link href="/css/style.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -47,7 +47,7 @@
                     
              
 
-
+                  
      
                 <!-- Authentication Links -->
                 @guest
@@ -57,9 +57,10 @@
                         padding: 10px;
                         border-radius: 10px;
                         margin-right: 50px;
-                        margin-top: 20px;
+                        margin-top:20px;
                         width: 100px;
-                        text-align: center">
+                        text-align: center;
+                        ">
                             {{ __('Login') }}</a>
                 </a>
           
@@ -70,9 +71,10 @@
                             padding: 10px;
                             border-radius: 10px;
                             margin-right: 50px;
-                            margin-top: 20px;
+                            margin-top:20px;
                             width: 100px;
-                            text-align: center"
+                            text-align: center;
+                            "
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}

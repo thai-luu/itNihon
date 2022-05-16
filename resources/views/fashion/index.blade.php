@@ -3,7 +3,14 @@
 @if(!empty($message))
 <div class="alert alert-success" role="alert">{{ $message}}</div>
 @endif
-
+<span class=" in">
+  <form role="search" class="app-search d-none d-md-block me-3">
+      <input type="text" placeholder="Search..." name="name" id="searchInput" class="form-control mt-0">
+      <a href="" class="active">
+          <i class="fa fa-search" id="search"></i>
+      </a>
+  </form>
+</span>
   <div class="row" data-aos="zoom-in" data-aos-delay="100">
     <table class="table" style="background: whitesmoke">
       <thead class="thead-dark">
@@ -36,6 +43,28 @@
 <div>  
 {{ $fashions->links('vendor.pagination.bootstrap-4') }}
 </div>
+<script>
+  $(document).ready(function() {
+     var data = $("#searchInput").text();
+     
+       $('#search').click(function(e) {
+        console.log("123");
+           e.preventDefault();
+          
+           $.ajax({
+               url: '/admin/fashion/filter',
+               type: 'POST',
+               dataType: 'html',
+               data: {
+                  
+               }
+           }).done(function(ketqua) {
+               $('#noidung').html(ketqua);
+           });
+           
+       });
+   });
+</script>
 @endsection
 
 <style>

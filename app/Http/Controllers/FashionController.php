@@ -20,7 +20,7 @@ class FashionController extends Controller
     public function index()
     {
         $fashions = Fashion::paginate(8);
-        
+        dd($fashions->links());
         return view('fashion.index',compact('fashions'));
     }
 
